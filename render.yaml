@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: student-budget-calculator
+    plan: free
+    buildCommand: ""
+    publishPath: .
+    pullRequestPreviewsEnabled: true
+
