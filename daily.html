@@ -21,7 +21,7 @@
 </main>
 <script>
 (()=>{
- const defaults={budget:2500,categories:{饭卡:900,交通:120,话费:50,日用品:250,社交:300,储蓄:300,应急:200}},categories=Object.keys(defaults.categories),settingsKey='student-budget-settings',entriesKey='student-budget-entries';
+ const defaults={budget:0,categories:{饭卡:0,交通:0,话费:0,日用品:0,社交:0,储蓄:0,应急:0}},categories=Object.keys(defaults.categories),settingsKey='student-budget-settings',entriesKey='student-budget-entries';
  const $=selector=>document.querySelector(selector),date=$('#date'),form=$('#entry-form'),catSelect=$('#category'),amount=$('#amount'),note=$('#note'),balances=$('#balances'),entriesEl=$('#entries'),submitButton=$('#submit-button'),cancelButton=$('#cancel-edit');
  const today=new Date(),month=String(today.getMonth()+1).padStart(2,'0'),monthKey=String(today.getFullYear())+'-'+month;let editingId=null,activeCategory='全部';
  const money=n=>'¥'+new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2}).format(n);date.value=String(today.getFullYear())+'-'+month+'-'+String(today.getDate()).padStart(2,'0');
